@@ -2,7 +2,6 @@ var data;
 var grossCon;
 var totalWind;
 var dateCol;
-var percentage;
 
 var index = 0;
 
@@ -24,7 +23,6 @@ function setup() {
   createCanvas(800, 800);
   background(0);
   dateCol = data.getColumn("HourDK");
-  percentage = data.getColumn("PerPower ");
   totalWind = data.getColumn("TotalWind");
   grossCon = data.getColumn("GrossCon");
   print(totalWind);
@@ -59,7 +57,5 @@ function mousePressed() {
   ellipse(width / 2, height / 2, mapTC, mapTC);
  fill(255);
   text(dateCol[index], 10, 10);
-  text(percentage[index], 10, 50);
-  text("of Denmarks total energy demand is supplied by wind", 10, 70)
 
 }
