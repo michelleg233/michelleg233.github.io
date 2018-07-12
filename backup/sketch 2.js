@@ -60,6 +60,6 @@ function mousePressed() {
  fill(255);
   text(dateCol[index], 10, 10);
   text(percentage[index], 10, 50);
-  text("of Denmark's total energy demand is supplied by wind", 10, 70)
+  text("of Denmarks total energy demand is supplied by wind", 10, 70)
 
 }
