@@ -51,27 +51,24 @@ function mousePressed() {
   }
   background(245, 244, 246);
   console.log(index);
-  var mapTW = map(totalWind[index], minCon, maxCon, 10, width / 8);
-  var mapTC = map(grossCon[index], minCon, maxCon, 10, width / 8);
+  var mapTW = map(totalWind[index], minWind, maxWind, 0, width / 4);
+  var mapTC = map(grossCon[index], minCon, maxCon, 0, width / 4);
   noStroke();
-   fill(255, 212, 108);
-  ellipse(475, height / 2, mapTW, mapTW);
- fill(0, 158, 168);
-  ellipse(250, height / 2, mapTC, mapTC);
+  fill(0, 158, 168);
+  ellipse(250, height / 2, mapTW, mapTW);
+  fill(255, 212, 108);
+  ellipse(475, height / 2, mapTC, mapTC);
  fill(0,23,47);
  textFont('Open Sans');
  textSize(20);
-   textSize(45);
-  text(percentage[index], 130, 230);
-  text("at", 240, 230)
-  text(dateCol[index], 300, 230);
+  text(dateCol[index], 130, 70);
+   textSize(75);
+  text(percentage[index], 130, 155);
    textSize(25);
-  text("How much of Denmark's energy\ndemand is met by wind power in a day?", 130, 110);
+  text("of Denmark's energy demand met by wind", 130, 200);
    textSize(15);
-  text("total energy demand", 410, 570);
+  text("total energy demand", 170, 550);
    textSize(15);
-  text("wind energy produced", 175, 570);
-   textSize(10);
-  text("*data from 2018-06-30", 130, 620)
+  text("wind energy produced", 420, 550);
 
 }
