@@ -22,7 +22,7 @@ function preload() {
 function setup() {
 
   createCanvas(800, 800);
-  background(0);
+  background(245, 244, 246);
   dateCol = data.getColumn("HourDK");
   percentage = data.getColumn("PerPower ");
   totalWind = data.getColumn("TotalWind");
@@ -49,17 +49,26 @@ function mousePressed() {
   if (index >= grossCon.length - 1) {
     index = 0;
   }
-  background(0);
+  background(245, 244, 246);
   console.log(index);
   var mapTW = map(totalWind[index], minWind, maxWind, 0, width / 4);
   var mapTC = map(grossCon[index], minCon, maxCon, 0, width / 4);
-  fill(0, 0, 255, 100);
-  ellipse(width / 2, height / 2, mapTW, mapTW);
-  fill(255, 0, 0, 100);
-  ellipse(width / 2, height / 2, mapTC, mapTC);
- fill(255);
-  text(dateCol[index], 10, 10);
-  text(percentage[index], 10, 50);
-  text("of Denmark's total energy demand is supplied by wind", 10, 70)
+  noStroke();
+  fill(0, 158, 168);
+  ellipse(250, height / 2, mapTW, mapTW);
+  fill(255, 212, 108);
+  ellipse(475, height / 2, mapTC, mapTC);
+ fill(0,23,47);
+ textFont('Open Sans');
+ textSize(20);
+  text(dateCol[index], 130, 70);
+   textSize(75);
+  text(percentage[index], 130, 155);
+   textSize(25);
+  text("of Denmark's energy demand met by wind", 130, 200);
+   textSize(15);
+  text("total energy demand", 170, 550);
+   textSize(15);
+  text("wind energy produced", 420, 550);
 
 }
